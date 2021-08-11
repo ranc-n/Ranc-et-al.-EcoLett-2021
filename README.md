@@ -22,6 +22,7 @@ This file stores the 6-hour movement trajectory for each animal. It is used for 
 * *animals_id*: unique animal identifier
 * *x*: longitude (relative to the origin of the environmental rasters; missing data indicated by -9999)
 * *y*: latitude (relative to the origin of the environmental rasters; missing data indicated by -9999)
+==> The files can be accessed at: *xxx.zenodo.xxx*
 
 #### Simulation_traj files
 The *Simulation_traj* folder contains two files storing the released locations of each animal. These files are used for the movement simulations and include the same fields as *Ranc_et_al_2021_Aspromonte_roedeer_traj.txt*.
