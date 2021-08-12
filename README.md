@@ -3,7 +3,7 @@
 
 Publicly available dataset and program code for:
 
-**N. Ranc, F. Cagnacci & P.R. Moorcroft. 2021. Memory drives the formation of animal home ranges: evidence from a reintroduction. *Ecology Letters* Vol. xx xx-xx. DOI: XXXXXXX
+**N. Ranc, F. Cagnacci & P.R. Moorcroft. In Press. Memory drives the formation of animal home ranges: evidence from a reintroduction. *Ecology Letters*
 **
 <br> 
 <br>
