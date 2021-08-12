@@ -70,9 +70,18 @@ The configuration files list 19 parameters:
 
 
 ### 2. Outputs
-The program produces two outputs:
-* *objective_function*: log-likelihood of the model parameter set given the data
-* *state_probabilities*: for each hourly record stores the current state, as well as the probabilities that the animal will be at any of the three states *in the next hour*
+In fitting mode, the program has six outputs:
+* *objective_function.csv*: log-likelihood of the model parameter set given the data (single output when writing_outputs=false)
+* *objective_function_detail.csv*: step-level log-likelihood of the model parameter set given the data (*r_patch* and *c_patch* translate continuous coordinates into row and column raster coordinates).
+* *arenaLogFile.txt*: log file for the creation of the spatial landscape (arena)
+* *mainLogFile.txt*: log file for the fitting of the model to all the individuals
+* *global_resource.asc*: combined resource selection function based on all the environmental resource layers and associated selection coefficients
+* *trajectory_covariates.csv*: intersection of resource selection function and movement trajectory
+<br>
+
+In movement simulation mode, the program has xx outputs:
+* *simulations.csv*: movement simulations (*run* = 0 for the release locations, 1:n for the simulation run of each individual)
+* *mainLogFile.txt*: log file for the fitting of the model to all the individuals
 <br>
 
 
@@ -80,11 +89,11 @@ The program produces two outputs:
 To run the code, the program must first be compiled. For example, using the gcc compiler with an unix shell command line:
 
 *cd /Path/to/Code*
-*g++ -std=c++11 Main.cpp Calculate_attraction.cpp Calculate_probability.cpp Likelihood.cpp Load_config_parameters.cpp Load_other_inputs.cpp Load_time_series.cpp Memory_dynamics.cpp -o roe_deer_program*
+*g++ -std=c++11 -O3 Configuration.cpp Dist_lookup_table.cpp Import_traj.cpp Launch_arena.cpp Likelihood.cpp Main.cpp Patch_dynamics.cpp Writing_outputs.cpp -o redistribution_kernel_roedeer*
 <br>
 
 The program can then be executed with a given configuration file; for example:
-*./roe_deer_program -config /Path/to/config_memory_best.txt*
+*./redistribution_kernel_roedeer -config /Path/to/config_best_Mmem_fitting.txt*
 <br>
 
-To estimate the model parameters, the  program can be called by any optimization algorithm (e.g., MCMC, Particle Swarm Optimization, etc.).
+For parameter estimation, the program can be called by any optimization algorithm (e.g., MCMC, Particle Swarm Optimization, etc.).
