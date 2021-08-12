@@ -12,12 +12,12 @@ The mechanistic movement model is written as a C++ program. The code made availa
 <br>
 
 ### 1. Inputs
-1. *Ranc_et_al_2021_Aspromonte_roedeer_traj.txt* (! published separately!): input files for the model fitting (movement trajectories)
+1. *Aspromonte_roedeer_traj.txt* (! published separately!): input files for the model fitting (movement trajectories)
 1. *Simulation_traj files*: input files for the movement simulations (release locations for each individual)
 1. *Environmental_rasters files*: environmental rasters used for model fitting or movement simulations
 1. *Configuration files*: input parameter values
 
-#### Ranc_et_al_2021_Aspromonte_roedeer_traj.txt
+#### Aspromonte_roedeer_traj.txt
 The file can be accessed at: 10.5281/zenodo.5189835. This file stores the 6-hour movement trajectory for each animal and is used for model fitting. It includes the following columns:
 * *animals_id*: unique animal identifier
 * *x*: longitude (epsg 3035; relative to the origin of the environmental rasters; missing data indicated by -9999)
