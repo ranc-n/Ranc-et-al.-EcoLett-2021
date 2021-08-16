@@ -7,7 +7,7 @@
 
 #include "header.h"
 
-// Reset the spatial landscapes (memory and attraction) -- to be ran between animals
+// Resets the spatial landscapes (memory and attraction) -- to be ran between animals
 void arena_renewal(ArraysDynamics & input_arrays, int focPatchX, int focPatchY)
 {
     int i, j;

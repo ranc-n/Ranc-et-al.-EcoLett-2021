@@ -7,7 +7,7 @@
 
 #include "header.h"
 
-// IMPORT THE TRAJECTORIES -- transform continuous coordinates into discrete patch ID
+// Imports the trajectories -- transform continuous coordinates into discrete patch ID
 structTrajectory launchTrajectoryCoordinates(std::string path, double resolution, double min_x, double min_y, int n_row, int n_col, int n_cells_mem)
 {
     structTrajectory returnValues;
@@ -156,7 +156,7 @@ structTrajectory launchTrajectoryCoordinates(std::string path, double resolution
 
 
 
-// GET TRAJECTORY DESCRIPTIVE METRICS
+// Gets the trajectory summary metrics
 structSummaryTraj getTrajectoryMetrics(structTrajectory traj)
 {
     int l;
@@ -202,7 +202,7 @@ structSummaryTraj getTrajectoryMetrics(structTrajectory traj)
 
 
 
-// GET TRAJECTORY LANDSCAPE INFO
+// Gets the trajectory's associated spatial information
     // Extracts covariate values for all fixes
     // Note.: this might give an error if the points are outside the rasters!
 void joinTrajectoryLandscape(std::string output_directory, structTrajectory & loadedTraj, double** resource_selection_array)
