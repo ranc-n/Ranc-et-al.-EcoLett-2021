@@ -38,6 +38,7 @@ void initialize2D_call(double** & vector, int nR, int nC)
 
 
 
+// Reads the spatial rasters and creates the spatial environment
 ArraysDynamics launchArena(std::string raster_directory, std::string output_directory, std::vector<std::string>variable_names, std::vector<double>selection_coef, bool writing_outputs)
 {
     ArraysDynamics returnValues;

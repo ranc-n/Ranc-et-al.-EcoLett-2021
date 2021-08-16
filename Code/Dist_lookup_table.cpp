@@ -9,6 +9,7 @@
 #include "header.h"
 
 
+// Creates a lookup table for the movement probability based on the step length distribution
 lookupTable iniApproxKernelStepLength (double distance_threshold, double resolution, double spatial_decay, double shape, double residence_p)
 {
     lookupTable returnValues;
@@ -92,6 +93,8 @@ lookupTable iniApproxKernelStepLength (double distance_threshold, double resolut
 }
 
 
+
+// Creates a lookup table for the local calculations (memory is not calculated over the entire landscape but only locally)
 lookupTable iniApproxKernel (double distance_threshold, double resolution, double spatial_decay)
 {
     lookupTable returnValues;

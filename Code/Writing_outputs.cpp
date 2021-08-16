@@ -7,18 +7,20 @@
 
 #include "header.h"
 
-void openFile(std::ofstream & file, std::string fileName, std::string PrRrep, std::string PrWrep, std::string dir)//VALIDATED
+// Opens file
+void openFile(std::ofstream & file, std::string fileName, std::string PrRrep, std::string PrWrep, std::string dir)
 {
     std::string filePath = dir + "outputs/" + fileName + "_refMem" + PrRrep + "_workMem" + PrWrep + ".csv";
     file.open(filePath.c_str());
 }
 
+// Closes file
 void closeFile(std::ofstream & file)
 {
     file.close();
 }
 
-
+// Saves trajectory summary
 void writeTrajCompoToLog(std::ofstream & logfile, structTrajectory traj, structSummaryTraj traj_metrics)
 {
     int i;
