@@ -1,6 +1,7 @@
 #include "header.h"
 
 
+// Reads the configuration file
 structConfig launchConfig_txt_sep(std::string path_to_config)
 {
     structConfig returnValues;
